@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SimpleSensors" xmlns="http://maven.apache.org/DECORATION/1.8.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 
+         http://maven.apache.org/xsd/decoration-1.8.0.xsd">
+    
+    <bannerLeft>
+        <name>SimpleSensors</name>
+        <src>images/logo.png</src>
+        <href>${project.url}</href>
+    </bannerLeft>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>2.0.0-M8</version>
+    </skin>
+
+    <custom>
+        <fluidoSkin>
+            <gitHub>
+                <projectId>ebpro/SimpleSensors</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>black</ribbonColor>
+            </gitHub>
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+            <topBarEnabled>true</topBarEnabled>
+            <sideBarEnabled>true</sideBarEnabled>
+        </fluidoSkin>
+    </custom>
+
+    <body>
+        <menu name="Overview">
+            <item name="Introduction" href="index.html"/>
+            <item name="Getting Started" href="getting-started.html"/>
+            <item name="Examples" href="examples.html"/>
+            <item name="API Documentation" href="apidocs/index.html"/>
+        </menu>
+        
+        <menu name="Development">
+            <item name="Contributing" href="contributing.html"/>
+            <item name="Source Repository" href="${project.scm.url}"/>
+            <item name="Issue Tracking" href="${project.issueManagement.url}"/>
+        </menu>
+
+        <menu ref="reports"/>
+    </body>
+</project>

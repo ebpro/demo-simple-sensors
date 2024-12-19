@@ -1,0 +1,47 @@
+/**
+ * SimpleSensors Module - A Java module for sensor network simulation.
+ * <p>
+ * This module demonstrates the use of Java Platform Module System (JPMS).
+ *
+ * <h2>Dependencies:</h2>
+ * <ul>
+ *   <li>{@code requires org.slf4j;}
+ *       - Simple Logging Facade for Java, used for logging</li>
+ *
+ *   <li>{@code requires ch.qos.logback.classic;}
+ *       - Logback implementation for SLF4J</li>
+ *
+ *   <li>{@code requires static lombok;}
+ *       - Compile-time only dependency for code generation
+ *       - 'static' means not needed at runtime</li>
+ *
+ *   <li>{@code requires tech.units.indriya;}
+ *       - Reference implementation of JSR-385
+ *       - Provides unit conversion and calculations</li>
+ *
+ *   <li>{@code requires java.measure;}
+ *       - JSR-385 Units of Measurement API</li>
+ * </ul>
+ *
+ * <h2>Exports:</h2>
+ * {@code exports fr.univtln.bruno.samples.simplesensors;}
+ * - Makes the main package accessible to other modules
+ *
+ * <h2>Usage Example:</h2>
+ * In module-info.java of dependent modules:
+ * <pre>{@code
+ * module your.module {
+ *     requires fr.univtln.bruno.samples.simplesensors;
+ * }
+ * }</pre>
+ *
+ * @see <a href="https://openjdk.java.net/projects/jigsaw/">Project Jigsaw</a>
+ */
+module fr.univtln.bruno.samples.simplesensors {
+  requires static lombok;
+  requires tech.units.indriya;
+  requires transitive java.measure;
+
+  exports fr.univtln.bruno.samples.simplesensors.sensors;
+  exports fr.univtln.bruno.samples.simplesensors.data;
+}
