@@ -11,8 +11,8 @@ A comprehensive example project demonstrating core Java concepts through a senso
 ## Quick Start
 
 ```bash
-git clone https://github.com/ebpro/SimpleSensors.git
-cd SimpleSensors
+git clone https://github.com/ebpro/demo-simple-sensors.git
+cd demo-simple-sensors
 ./mvnw -P shadedjar package 
 java -jar target/SimpleSensors-*-SNAPSHOT-withdependencies.jar 
 ```
